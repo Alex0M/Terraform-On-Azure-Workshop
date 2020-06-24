@@ -21,3 +21,19 @@ variable "repo_url" {
     description = "Repository url to pull the latest source from"
     default     = "https://github.com/Alex0M/AzureEats-Website"
 }
+
+variable "sqlserver_login" {
+    description = "The name of the Azure SQL Server Admin user"
+}
+
+variable "sqlserver_pass" {
+    description = "The Azure SQL Database Admin users password"
+}
+
+variable "mongo_root_user" {
+    description = "The name of the MangoDB Root user"
+}
+
+variable "mongo_root_pass" {
+    description = "The MongoDB Root user password"
+}
