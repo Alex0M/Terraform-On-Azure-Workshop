@@ -81,10 +81,6 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
-    # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      run: terraform fmt -check
-
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -var 'sqlserver_login={{ secrets.SQLSERVER_LOGIN }}' -var 'sqlserver_pass={{ secrets.SQLSERVER_PASS }}' -var 'mongo_root_user={{ secrets.MONGO_ROOT_USER }}' -var 'mongo_root_pass={{ secrets.MONGO_ROOT_PASS }}'
