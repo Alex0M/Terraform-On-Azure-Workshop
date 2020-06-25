@@ -17,6 +17,7 @@ jobs:
       run:
         shell: bash
 
+    # Azure Login with Service Principal
     steps:
     - name: Azure Login 
       uses: azure/login@v1
@@ -25,7 +26,6 @@ jobs:
 
 
     # Checkout the repository to the GitHub Actions runner
-    steps:
     - name: Checkout
       uses: actions/checkout@v2
 
