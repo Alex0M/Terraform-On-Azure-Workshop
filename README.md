@@ -4,3 +4,4 @@
 | ---- | --------- | ----------- |
 | June 22, 2020 | [Challenge 1]| Hosting a website on Azure App Service |
 | June 23, 2020 | [Challenge 2]| Deploying databases on Azure using Terraform CLI |
+| June 24, 2020 | [Challenge 3]| Remote state and CI/CD with GitHub Actions |
