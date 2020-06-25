@@ -122,14 +122,3 @@ resource "azurerm_app_service" "main" {
         "Personalizer__Endpoint"        = ""
     }
 }
-
-
-resource "null_resource" "main" {
-  provisioner "local-exec" {
-    command = "az webapp deployment source config --branch ${var.branch} --manual-integration --name ${azurerm_app_service.main.name} --repo-url ${var.repo_url} --resource-group ${azurerm_resource_group.main.name}"
-  }
-
-  depends_on = [
-    azurerm_app_service.main,
-  ]
-}
