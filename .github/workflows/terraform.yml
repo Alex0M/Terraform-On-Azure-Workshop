@@ -6,6 +6,12 @@ on:
     - master
   pull_request:
 
+env:
+  ARM_CLIENT_ID: ${{ secrets.TF_SP_ID }}
+  ARM_CLIENT_SECRET: ${{ secrets.TF_SP_PASS }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.SUBSCRIPTION_ID }}
+  ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+
 jobs:
   terraform:
     name: 'Terraform'
