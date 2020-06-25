@@ -64,7 +64,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az webapp deployment source config --branch master --manual-integration --name asp-${{ secrets.ENV_PREFIX }} --repo-url https://github.com/Alex0M/AzureEats-Website --resource-group resources-${{ secrets.ENV_PREFIX }} 
+          az webapp deployment source config --branch master --manual-integration --name webappservice-${{ secrets.ENV_PREFIX }} --repo-url https://github.com/Alex0M/AzureEats-Website --resource-group resources-${{ secrets.ENV_PREFIX }} 
     
     # Azure logout 
     - name: Azure Logout
