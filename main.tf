@@ -42,6 +42,14 @@ resource "azurerm_sql_database" "main" {
   }
 }
 
+resource "azurerm_sql_firewall_rule" "main" {
+    name                = "sqlfirewall-${var.env_prefix}"
+    resource_group_name = azurerm_resource_group.main.name
+    server_name         = azurerm_sql_server.main.name
+    start_ip_address    = "0.0.0.0"
+    end_ip_address      = "0.0.0.0"
+}
+
 resource "azurerm_container_group" "main" {
   name                  = "aci-${var.env_prefix}"
   location              = azurerm_resource_group.main.location
