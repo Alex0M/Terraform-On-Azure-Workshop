@@ -8,10 +8,6 @@ variable "location" {
   default     = "eastus"
 }
 
-variable "subscription_id" {
-  description = "Azure Subscription ID"
-}
-
 variable "branch" {
     description = "The branch name of the repository"
     default     = "master"
