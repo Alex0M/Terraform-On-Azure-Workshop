@@ -1,0 +1,18 @@
+environment: production
+
+apphost: k8s
+
+label:
+  name: tailwindtraders
+
+container:
+  name: tailwindtraders
+  pullPolicy: IfNotPresent
+  image: acrhconf2020.azurecr.io/tailwindtraders
+  tag: v1.0.0
+  port: 80
+replicas: 1
+
+service:
+  port: 80
+  type: LoadBalancer
